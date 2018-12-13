@@ -3,43 +3,43 @@
 	<head>
 		<meta charset="utf-8">
 		<title>fabryka chomików</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<label>imie</label>
-		<input type="text" id="hamster-name">
-		<label>wiek</label>
-		<input type="number" id="hamster-age">		
-		<label>gatunek</label>
-		<select id="hamster-type">
-			<option value="chomik bałkański">chomik bałkański</option>
-    		<option value="chomik Campbella">chomik Campbella</option>
-    		<option value="chomik chiński">chomik chiński</option>
-    		<option value="chomik dżungarski">chomik dżungarski</option>
-    		<option value="chomik europejski">chomik europejski</option>
-    		<option value="chomik Roborowskiego">chomik Roborowskiego</option>
-    		<option value="chomik stepowy">chomik stepowy</option>
-    		<option value="chomiczek syryjski">chomiczek syryjski</option>
-    		<option value="chomik turecki">chomik turecki</option>
-		</select>
-		<button type="button" onclick="goToCage();">do klatki</button>
+		<div class="container text-center">
+			<label>imie</label>
+			<input type="text" id="hamster-name">
+			<label>wiek</label>
+			<input type="number" id="hamster-age">		
+			<label>gatunek</label>
+			<select id="hamster-type">
+				<option value="chomik bałkański">chomik bałkański</option>
+	    		<option value="chomik Campbella">chomik Campbella</option>
+	    		<option value="chomik chiński">chomik chiński</option>
+	    		<option value="chomik dżungarski">chomik dżungarski</option>
+	    		<option value="chomik europejski">chomik europejski</option>
+	    		<option value="chomik Roborowskiego">chomik Roborowskiego</option>
+	    		<option value="chomik stepowy">chomik stepowy</option>
+	    		<option value="chomiczek syryjski">chomiczek syryjski</option>
+	    		<option value="chomik turecki">chomik turecki</option>
+			</select>
+			<button class="btn btn-primary" type="button" onclick="goToCage();">do klatki</button>
 
-		<div id="cage">
+			<div id="cage">
+			</div>
 		</div>
 
 		<script id="hamster-template" type="x-tmpl-mustache">
-		<table>
+		<table class="table table-bordered">
 			<tr>
-				<td>
-					{{name}}
-				</td>
-				<td>
-					{{age}}
-				</td>
-				<td>
-					{{type}}
-				</td>
-			</tr>
+		        {{#allHamster}}
+		            <tr>
+		                <td>{{name}}</td>
+		                <td>{{age}}</td>
+		                <td>{{type}}</td>
+		            </tr>
+				{{/allHamster}}
 		</table>
 		</script>
 

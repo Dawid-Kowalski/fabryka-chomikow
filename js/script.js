@@ -6,7 +6,7 @@ let hamsterTemplate = document.getElementById("hamster-template").innerHTML;
 
 let cageHTML = document.getElementById("cage");
 
-let cage = [];
+let cage = {allHamster: []};
 
 function Hamster(name, age, type) {
 	this.name = name;
@@ -21,7 +21,7 @@ function goToCage() {
 
 	let hamster = new Hamster(hamsterName, hamsterAge, hamsterType);
 
-	cage.push(hamster);
+	cage.allHamster.push(hamster);
 
 	addHamster();
 }
@@ -33,12 +33,8 @@ function addHamster() {
 	let results = document.createElement("div");
 	cageHTML.appendChild(results);
 
-	for(let i=0; i<cage.length; i++) {
-		let generatedHamster = Mustache.render(hamsterTemplate, cage[i]);
-		results.insertAdjacentHTML("beforeend", generatedHamster);
-	}
-
+	let generatedHamster = Mustache.render(hamsterTemplate, cage);
+	results.insertAdjacentHTML("beforeend", generatedHamster);
 }
-
 
 
