@@ -8,21 +8,21 @@
 	</head>
 	<body>
 		<label>imie</label>
-		<input type="text">
+		<input type="text" id="hamster-name">
 		<label>wiek</label>
-		<input type="number">		
+		<input type="number" id="hamster-age">		
 		<label>gatunek</label>
-		<select>
-			<option>chomik bałkański</option>
-    		<option>chomik Campbella</option>
-    		<option>chomik chiński</option>
-    		<option>chomik dżungarski</option>
-    		<option>chomik europejski</option>
-    		<option>chomik Roborowskiego</option>
-    		<option>chomik stepowy</option>
-    		<option>chomiczek syryjski</option>
-    		<option>chomik turecki</option>
+		<select id="hamster-type">
+			<option value="chomik bałkański">chomik bałkański</option>
+    		<option value="chomik Campbella">chomik Campbella</option>
+    		<option value="chomik chiński">chomik chiński</option>
+    		<option value="chomik dżungarski">chomik dżungarski</option>
+    		<option value="chomik europejski">chomik europejski</option>
+    		<option value="chomik Roborowskiego">chomik Roborowskiego</option>
+    		<option value="chomik stepowy">chomik stepowy</option>
+    		<option value="chomiczek syryjski">chomiczek syryjski</option>
+    		<option value="chomik turecki">chomik turecki</option>
 		</select>
-		<button type="button">do klatki</button>
+		<button type="button" onclick="goToCage();">do klatki</button>
 	</body>
 </html>
