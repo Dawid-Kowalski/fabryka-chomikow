@@ -4,7 +4,6 @@
 		<meta charset="utf-8">
 		<title>fabryka chomików</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
 		<label>imie</label>
@@ -24,5 +23,27 @@
     		<option value="chomik turecki">chomik turecki</option>
 		</select>
 		<button type="button" onclick="goToCage();">do klatki</button>
+
+		<div id="cage">
+		</div>
+
+		<script id="hamster-template" type="x-tmpl-mustache">
+		<table>
+			<tr>
+				<td>
+					{{name}}
+				</td>
+				<td>
+					{{age}}
+				</td>
+				<td>
+					{{type}}
+				</td>
+			</tr>
+		</table>
+		</script>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>
